@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <div class="container">
+    <a href="/" class="navbar-brand">NeonGadgets</a>
+    <ul class="nav-links">
+      <li><%= link_to "Home", root_path, class: active?(root_path) %></li>
+      <li><%= link_to "Products", "#", class: active?("products") %></li>
+      <li><%= link_to "About", about_us_path, class: active?(about_us_path) %></li>
+      <li><%= link_to "Contact", contact_us_path, class: active?(contact_us_path) %></li>
+    </ul>
+  </div>
+</nav>

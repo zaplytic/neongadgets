@@ -1,0 +1,42 @@
+@use '../base/variables' as *;
+@use 'sass:color';
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.who-we-are,
+.featured-products {
+  padding: 4rem 0;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+    color: color.adjust($text-color, $lightness: -20%);
+  }
+}
+
+.featured-products {
+  background-color: $light-gray;
+
+  h2 {
+    margin-bottom: 3rem;
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
