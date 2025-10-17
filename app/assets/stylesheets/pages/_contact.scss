@@ -1,0 +1,42 @@
+@use '../base/variables' as *;
+
+.contact-form-container {
+  max-width: 700px;
+  margin: 3rem auto 0;
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 0.75rem;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.2);
+    }
+  }
+
+  button[type="submit"] {
+    align-self: flex-start;
+  }
+}
